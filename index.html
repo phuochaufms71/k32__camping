@@ -54,7 +54,7 @@
             <!-- Activity Item 1 -->
             <li class="activity-item">
                 <div class="activity-item__evaluate">
-                    <i class="activity-item__evaluate--heart fa-solid fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
                 </div>
                 <a href="#!" class="activity-item__body">
                     <img src="./img/product1.png" alt="" class="activity-item__thumb">
@@ -116,9 +116,7 @@
 
     <!-- Contact -->
     <div class="contact">
-        <figure class="contact__images">        
-            <img src="./img/homeicon.png" alt="" class="contact__img--home">
-        </figure>
+        <img src="./img/homeicon.png" alt="" class="contact__img">
         <div class="contact-content">
             <h2 class="contact-content__heading">Let's Stay In Touch</h2>
             <p class="contact-content__desc">
@@ -235,5 +233,15 @@
             <code class="footer__copy">&copy;</code> 2020. All right resered.
         </p>
     </div>
+
+    <!-- Script -->
+    <script>
+        var hearts = document.querySelectorAll('.activity-item__evaluate');
+            hearts.forEach(item => {
+                item.onclick = function() {
+                    item.classList.toggle('active')
+                }
+            })
+    </script>
 </body>
 </html>

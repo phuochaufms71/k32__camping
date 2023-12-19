@@ -13,6 +13,7 @@ html {
 body {
     font-size: 1.6rem;
     font-family: 'Poppins', sans-serif;
+    background-color: #FAF4F2;
 }
 
 /* Common */
@@ -179,7 +180,7 @@ a {
     cursor: pointer;
 }
 
-.activity-item__evaluate--heart {
+.active {
     color: #d67459;
 }
 
@@ -205,31 +206,18 @@ a {
 
 /* Contact */
 .contact {
-    display: flex;
     background: url('./img/mask.png'), #f3e0db;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: -300px center;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.contact__img {
     position: relative;
-}
-
-.contact__images {
-    height: 390px;
-    overflow: hidden;
-}
-
-.contact__img--home {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 150px;
-}
-
-.contact-content {
-    position: absolute;
-    top: 70px;
-    right: 20px;
+    left: 150px
 }
 
 .contact-content__heading {
@@ -237,6 +225,7 @@ a {
 }
 
 .contact-content__desc {
+    width: 730px;
     margin-top: 24px;
     color: #8b8b8b;
 }
@@ -282,10 +271,9 @@ a {
 /* Footer */
 .footer {
     margin-top: 93px;
-    padding: 93px 46px;
+    padding: 93px 46px 30px;
     background-color: #f3e0db;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    border-radius: 50px 50px 0 0;
 }
 
 .footer__list {
@@ -316,6 +304,7 @@ a {
 }
 
 .footer__all-right {
+    color: #8b8b8b;
     margin-top: 60px;
     font-size: 1.6rem;
     display: flex;
