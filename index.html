@@ -38,7 +38,7 @@
                 <a href="#!" class="header-item__link">Contact</a>
             </li>
         </ul>
-        <a href="#!" class="header__btn">Sign up</a>
+        <i class="header__menu fa-solid fa-bars"></i>
     </div>
 
     <!-- Intro -->
@@ -116,42 +116,46 @@
 
     <!-- Contact -->
     <div class="contact">
-        <img src="./img/homeicon.png" alt="" class="contact__img">
+        <figure class="contact__images">
+            <img src="./img/homeicon.png" alt="" class="contact__img">
+        </figure>
         <div class="contact-content">
             <h2 class="contact-content__heading">Let's Stay In Touch</h2>
             <p class="contact-content__desc">
                 Get travels planning ideas, helpful tips and stories from our visitors delivered right to your inbox.
             </p>
-            <div class="contact-row">
-                <span class="contact-row__download">
-                    Download Our App
-                </span>
-                <span class="contact-row__follow">
-                    Follow Us
-                </span>
-            </div>
-            <div class="contact-row">
-                <div class="contact-app">
-                    <a href="#!">
-                        <img src="./img/download-on-the-app-store-apple-1.png" alt="" class="contact-app__dl-img">
-                    </a>
-                    <a href="#!">
-                        <img src="./img/google-play-badge-1.png" alt="" class="contact-app__fl-img">
-                    </a>
+            <div class="contact__info">
+                <div class="contact__left">
+                    <span class="contact__download">
+                        Download Our App
+                    </span>
+                    <div class="contact-app">
+                        <a href="#!">
+                            <img src="./img/download-on-the-app-store-apple-1.png" alt="" class="contact-app__at-img">
+                        </a>
+                        <a href="#!">
+                            <img src="./img/google-play-badge-1.png" alt="" class="contact-app__gg-img">
+                        </a>
+                    </div>
                 </div>
-                <div class="contact-social">
-                    <a href="#!">
-                        <i class="contact-social__icon fa-brands fa-square-facebook"></i>
-                    </a>
-                    <a href="#!">
-                        <i class="contact-social__icon fa-brands fa-youtube"></i>
-                    </a>
-                    <a href="#!">
-                        <i class="contact-social__icon fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="#!">
-                        <i class="contact-social__icon fa-brands fa-pinterest"></i>
-                    </a>
+                <div class="contact__right">
+                    <span class="contact__follow">
+                        Follow Us
+                    </span>
+                    <div class="contact-social">
+                        <a href="#!">
+                            <i class="contact-social__icon fa-brands fa-square-facebook"></i>
+                        </a>
+                        <a href="#!">
+                            <i class="contact-social__icon fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#!">
+                            <i class="contact-social__icon fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#!">
+                            <i class="contact-social__icon fa-brands fa-pinterest"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -236,12 +240,20 @@
 
     <!-- Script -->
     <script>
+        //Event heart
         var hearts = document.querySelectorAll('.activity-item__evaluate');
             hearts.forEach(item => {
                 item.onclick = function() {
                     item.classList.toggle('active')
                 }
             })
+
+        //Event menu
+        var menu = document.querySelector('.header__menu');
+        var navigation = document.querySelector('.header__navigation');
+        menu.onclick = function() {
+            navigation.classList.toggle('open');
+        }
     </script>
 </body>
 </html>
